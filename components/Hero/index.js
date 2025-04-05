@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import initTranslations from '../../app/i18n';
 import { lora } from '@/fonts';
 
@@ -8,6 +9,12 @@ const Hero = async ({ lng }) => {
             <h1 className={`${lora.className}`}>
                 {t('hero.title')}
             </h1>
+            <Link href="/login">
+                Sign In
+            </Link>
+            <Link href="/registration">
+                Create Account
+            </Link>
         </section>
     );
 };
